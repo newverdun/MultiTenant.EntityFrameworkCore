@@ -20,6 +20,4 @@ jobs:
     - name: Install dependencies
       run: dotnet restore $GITHUB_WORKSPACE/Sources/MultiTenant.EntityFrameworkCore.SqlServer/MultiTenant.EntityFrameworkCore.SqlServer.csproj
     - name: Build
-      run: dotnet build --configuration Release --no-restore
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet build $GITHUB_WORKSPACE/Sources/MultiTenant.EntityFrameworkCore.SqlServer/MultiTenant.EntityFrameworkCore.SqlServer.csproj --configuration Release --no-restore
