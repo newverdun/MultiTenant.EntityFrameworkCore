@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies
-      run: dotnet restore ~/Sources/MultiTenant.EntityFrameworkCore.SqlServer/MultiTenant.EntityFrameworkCore.SqlServer.csproj
+      run: dotnet restore {GITHUB_WORKSPACE}/Sources/MultiTenant.EntityFrameworkCore.SqlServer/MultiTenant.EntityFrameworkCore.SqlServer.csproj
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Test
