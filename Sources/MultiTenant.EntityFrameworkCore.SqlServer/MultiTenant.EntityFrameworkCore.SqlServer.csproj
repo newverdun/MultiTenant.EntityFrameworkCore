@@ -1,7 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Miguel Angulo</Authors>
+    <Company>Nyua Solutions</Company>
+    <Description>Implementation for using multiple Tenants within an ASP .NET Core API 3.1</Description>
+    <Copyright>Verdun Labs 2020</Copyright>
+	  <iconUrl>https://github.com/tcs1896/SharpChecker/blob/master/SharpChecker/SharpChecker/SharpChecker/Icon.png?raw=true</iconUrl>
+    <PackageProjectUrl>https://github.com/newverdun/MultiTenant.EntityFrameworkCore</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
