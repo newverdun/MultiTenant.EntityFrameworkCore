@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <Authors>Nyua Solutions</Authors>
+	  <Company>Nyua Solutions</Company>
+	  <Description>Implementation for using multiple Tenants</Description>
+	  <Copyright>Verdun Labs 2020</Copyright>
+	  <PackageProjectUrl>https://github.com/newverdun/MultiTenant.EntityFrameworkCore</PackageProjectUrl>
+	  <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
