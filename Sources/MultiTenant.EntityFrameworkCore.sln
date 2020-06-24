@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiTenant.EntityFrameworkCore.SqlServer", "MultiTenant.EntityFrameworkCore.SqlServer\MultiTenant.EntityFrameworkCore.SqlServer.csproj", "{4E369357-9C77-4DD2-9979-34D7A32802AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiTenant.EntityFrameworkCore", "MultiTenant.EntityFrameworkCore\MultiTenant.EntityFrameworkCore.csproj", "{C473E398-269E-4DBC-A45B-D1AF3331D098}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiMultiTenantSample", "WebApiMultiTenantSample\WebApiMultiTenantSample.csproj", "{87D00A9A-CB71-48E0-8243-897BB16B9EDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E369357-9C77-4DD2-9979-34D7A32802AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E369357-9C77-4DD2-9979-34D7A32802AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E369357-9C77-4DD2-9979-34D7A32802AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E369357-9C77-4DD2-9979-34D7A32802AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C473E398-269E-4DBC-A45B-D1AF3331D098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C473E398-269E-4DBC-A45B-D1AF3331D098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C473E398-269E-4DBC-A45B-D1AF3331D098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C473E398-269E-4DBC-A45B-D1AF3331D098}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87D00A9A-CB71-48E0-8243-897BB16B9EDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D00A9A-CB71-48E0-8243-897BB16B9EDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D00A9A-CB71-48E0-8243-897BB16B9EDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D00A9A-CB71-48E0-8243-897BB16B9EDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A19DFDB-1EEE-4421-8E25-290A33A3749E}
+	EndGlobalSection
+EndGlobal
