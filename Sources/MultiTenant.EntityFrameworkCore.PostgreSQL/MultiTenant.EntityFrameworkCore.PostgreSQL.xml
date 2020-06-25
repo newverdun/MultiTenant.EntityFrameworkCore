@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MultiTenant.EntityFrameworkCore.PostgreSQL</name>
+    </assembly>
+    <members>
+        <member name="T:MultiTenant.EntityFrameworkCore.PostgreSQL.Configuration.DatabaseTypes.Postgres">
+            <inherit/>
+        </member>
+        <member name="M:MultiTenant.EntityFrameworkCore.PostgreSQL.Configuration.DatabaseTypes.Postgres.EnableDatabase(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <inherit/>
+        </member>
+        <member name="M:MultiTenant.EntityFrameworkCore.PostgreSQL.Configuration.DatabaseTypes.Postgres.SetConnectionString``1(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder{``0},System.String)">
+            <inherit/>
+        </member>
+        <member name="T:MultiTenant.EntityFrameworkCore.PostgreSQL.RegisterDI">
+            <summary>
+            Register dependencies
+            </summary>
+        </member>
+        <member name="M:MultiTenant.EntityFrameworkCore.PostgreSQL.RegisterDI.AddMultiTenantEntityFrameworkCore``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">
+            <summary>
+            Register dependencies to use MultiTenants
+            </summary>
+            <typeparam name="MultiTenantDbContext">DbContext which will be multi tenant</typeparam>
+            <typeparam name="TDataBaseManager">Implementation to obtain the connections strings corresponding to each tenant</typeparam>
+            <param name="services">The services.</param>
+            <param name="tenantIdFieldName">HTTP header name to get the tenant ID</param>
+            <returns>The services.</returns>
+        </member>
+    </members>
+</doc>

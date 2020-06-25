@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MultiTenant.EntityFrameworkCore.MultiProviders</name>
+    </assembly>
+    <members>
+        <member name="T:MultiTenant.EntityFrameworkCore.MultiProviders.RegisterDI">
+            <summary>
+            Register dependencies
+            </summary>
+        </member>
+        <member name="M:MultiTenant.EntityFrameworkCore.MultiProviders.RegisterDI.AddMultiTenantEntityFrameworkCore``3(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">
+            <summary>
+            Register dependencies to use MultiTenants
+            </summary>
+            <typeparam name="MultiTenantDbContext">DbContext which will be multi tenant</typeparam>
+            <typeparam name="TDataBaseManager">Implementation to obtain the connections strings corresponding to each tenant</typeparam>
+            <typeparam name="TDatabaseType">The class that implements the IDatabaseType interface, dependency injection will be done automatically</typeparam>
+            <param name="services">The services.</param>
+            <param name="tenantIdFieldName">HTTP header name to get the tenant ID</param>
+            <returns>The services.</returns>
+        </member>
+    </members>
+</doc>
