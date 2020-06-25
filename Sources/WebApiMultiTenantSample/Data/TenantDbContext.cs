@@ -1,10 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MultiTenant.EntityFrameworkCore;
 using WebApiMultiTenantSample.Data.Model;
 
 namespace WebApiMultiTenantSample.Data
 {
-    public class TenantDbContext : DbContext, IDbContext
+    public class TenantDbContext : DbContext
     {
         public TenantDbContext(DbContextOptions<TenantDbContext> options)
             : base(options)

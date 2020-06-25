@@ -1,16 +1,12 @@
-﻿namespace MultiTenant.EntityFrameworkCore
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace MultiTenant.EntityFrameworkCore
 {
-    /// <summary>
-    /// Context factory interface
-    /// </summary>
-    public interface IContextFactory
+    public interface IContextFactory<TDbContext> where TDbContext : DbContext
     {
-        /// <summary>
-        /// Gets the database context.
-        /// </summary>
-        /// <value>
-        /// The database context.
-        /// </value>
-        IDbContext DbContext { get; }
+        TDbContext DbContext { get; }
     }
 }

@@ -8,7 +8,7 @@
 	  <Description>Implementation for using multiple Tenants</Description>
 	  <Copyright>Verdun Labs 2020</Copyright>
 	  <PackageProjectUrl>https://github.com/newverdun/MultiTenant.EntityFrameworkCore</PackageProjectUrl>
-	  <Version>1.1.0</Version>
+	  <Version>1.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

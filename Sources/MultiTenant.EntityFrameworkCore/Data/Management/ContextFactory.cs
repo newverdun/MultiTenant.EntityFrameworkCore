@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MultiTenant.EntityFrameworkCore.Configuration.DatabaseTypes;
 using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace MultiTenant.EntityFrameworkCore.Data.Management
 {
-    public class ContextFactory<MultiTenantDbContext> : IContextFactory where MultiTenantDbContext : DbContext, IDbContext
+    public class ContextFactory<TDbContext> : IContextFactory<TDbContext> where TDbContext : DbContext
     {
         private readonly string TenantIdFieldName;
         private readonly HttpContext httpContext;
@@ -22,13 +24,14 @@ namespace MultiTenant.EntityFrameworkCore.Data.Management
             dataBaseManager = serviceProvider.GetRequiredService<IDataBaseManager>();
             databaseType = serviceProvider.GetRequiredService<IDatabaseType>();
         }
-        public IDbContext DbContext
+
+        public TDbContext DbContext 
         {
             get
             {
                 var options = ChangeConnectionString(this.TenantId).Options;
-                MultiTenantDbContext dbContext = (MultiTenantDbContext)Activator.CreateInstance(typeof(MultiTenantDbContext), options);
-                
+                TDbContext dbContext = (TDbContext)Activator.CreateInstance(typeof(TDbContext), options);
+
                 return dbContext;
             }
         }
@@ -74,13 +77,13 @@ namespace MultiTenant.EntityFrameworkCore.Data.Management
             }
         }
 
-        private DbContextOptionsBuilder<MultiTenantDbContext> ChangeConnectionString(string tenantId) //where TDbContext : DbContext
+        private DbContextOptionsBuilder<TDbContext> ChangeConnectionString(string tenantId) //where TDbContext : DbContext
         {
             // 1. Obtain Connection String from DataBaseManager and Add new DB name to 
             var connectionString = dataBaseManager.GetConnectionString(tenantId);
 
             // 2. Create DbContextOptionsBuilder with new Database name
-            var contextOptionsBuilder = new DbContextOptionsBuilder<MultiTenantDbContext>();
+            var contextOptionsBuilder = new DbContextOptionsBuilder<TDbContext>();
 
             databaseType.SetConnectionString(contextOptionsBuilder, connectionString);
 

@@ -21,17 +21,15 @@ namespace MultiTenant.EntityFrameworkCore.SqlServer
         /// <param name="tenantIdFieldName">HTTP header name to get the tenant ID</param>
         /// <returns>The services.</returns>
         public static IServiceCollection AddMultiTenantEntityFrameworkCore<MultiTenantDbContext, TDataBaseManager>(this IServiceCollection services, string tenantIdFieldName)
-            where MultiTenantDbContext : DbContext, IDbContext
+            where MultiTenantDbContext : DbContext
             where TDataBaseManager : class, IDataBaseManager
         {
             services.AddSingleton<IDatabaseType, MsSql>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddDbContext<MultiTenantDbContext>();
 
-            services.AddScoped<IDbContext, MultiTenantDbContext>();
-
             services.AddTransient<IDataBaseManager, TDataBaseManager>();
-            services.AddTransient<IContextFactory>(x => new ContextFactory<MultiTenantDbContext>(tenantIdFieldName, x));
+            services.AddTransient<IContextFactory<MultiTenantDbContext>>(x => new ContextFactory<MultiTenantDbContext>(tenantIdFieldName, x));
 
             return services;
         }

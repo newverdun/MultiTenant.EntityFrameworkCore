@@ -27,7 +27,7 @@ namespace MultiTenant.EntityFrameworkCore.MultiProviders
             TDatabaseType>(
             this IServiceCollection services, 
             string tenantIdFieldName)
-            where MultiTenantDbContext : DbContext, IDbContext
+            where MultiTenantDbContext : DbContext
             where TDataBaseManager : class, IDataBaseManager
             where TDatabaseType : class, IDatabaseType
         {
@@ -39,10 +39,8 @@ namespace MultiTenant.EntityFrameworkCore.MultiProviders
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddDbContext<MultiTenantDbContext>();
 
-            services.AddScoped<IDbContext, MultiTenantDbContext>();
-
             services.AddTransient<IDataBaseManager, TDataBaseManager>();
-            services.AddTransient<IContextFactory>(x => new ContextFactory<MultiTenantDbContext>(tenantIdFieldName, x));
+            services.AddTransient<IContextFactory<MultiTenantDbContext>>(x => new ContextFactory<MultiTenantDbContext>(tenantIdFieldName,x));
 
             return services;
         }
@@ -62,7 +60,7 @@ namespace MultiTenant.EntityFrameworkCore.MultiProviders
             this IServiceCollection services,
             string tenantIdFieldName,
             Type databaseType)
-            where MultiTenantDbContext : DbContext, IDbContext
+            where MultiTenantDbContext : DbContext
             where TDataBaseManager : class, IDataBaseManager
         {
             services.AddSingleton(typeof(IDatabaseType), databaseType);
@@ -73,10 +71,8 @@ namespace MultiTenant.EntityFrameworkCore.MultiProviders
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddDbContext<MultiTenantDbContext>();
 
-            services.AddScoped<IDbContext, MultiTenantDbContext>();
-
             services.AddTransient<IDataBaseManager, TDataBaseManager>();
-            services.AddTransient<IContextFactory>(x => new ContextFactory<MultiTenantDbContext>(tenantIdFieldName, x));
+            services.AddTransient<IContextFactory<MultiTenantDbContext>>(x => new ContextFactory<MultiTenantDbContext>(tenantIdFieldName, x));
 
             return services;
         }

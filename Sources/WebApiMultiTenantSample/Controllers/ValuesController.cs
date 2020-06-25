@@ -12,9 +12,9 @@ namespace WebApiMultiTenantSample.Controllers
     public class ValuesController : ControllerBase
     {
         private readonly TenantDbContext tenantDbContext;
-        public ValuesController(IContextFactory factory)
+        public ValuesController(IContextFactory<TenantDbContext> factory)
         {
-            tenantDbContext = (TenantDbContext)factory.DbContext;
+            tenantDbContext = factory.DbContext;
         }
 
         // GET: api/<ValuesController>

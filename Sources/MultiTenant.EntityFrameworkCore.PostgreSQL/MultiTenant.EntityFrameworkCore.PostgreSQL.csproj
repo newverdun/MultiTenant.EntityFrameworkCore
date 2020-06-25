@@ -8,7 +8,7 @@
 	  <Description>Implementation for using multiple Tenants within an ASP .NET Core API 3.1</Description>
 	  <Copyright>Verdun Labs 2020</Copyright>
 	  <PackageProjectUrl>https://github.com/newverdun/MultiTenant.EntityFrameworkCore</PackageProjectUrl>
-	  <Version>1.1.0</Version>
+	  <Version>1.2.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
