@@ -9,6 +9,13 @@
     <Copyright>Verdun Labs 2020</Copyright>
     <PackageProjectUrl>https://github.com/newverdun/MultiTenant.EntityFrameworkCore</PackageProjectUrl>
     <Version>1.2.0</Version>
+	<RequireLicenseAcceptance>true</RequireLicenseAcceptance>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<RepositoryType>git</RepositoryType>
+	<RepositoryUrl>https://github.com/newverdun/MultiTenant.EntityFrameworkCore</RepositoryUrl>
+	<PackageTags>multitenant multi tenant multi-tenant</PackageTags>
+	<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	<PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -23,5 +30,12 @@
   <ItemGroup>
     <ProjectReference Include="..\MultiTenant.EntityFrameworkCore\MultiTenant.EntityFrameworkCore.csproj" />
   </ItemGroup>
+
+	<ItemGroup>
+		<None Include="icon.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>
