@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiTenant.EntityFrameworkCore.SqlServer", "MultiTenant.EntityFrameworkCore.SqlServer\MultiTenant.EntityFrameworkCore.SqlServer.csproj", "{4E369357-9C77-4DD2-9979-34D7A32802AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiTenant.EntityFrameworkCore.SqlServer", "MultiTenant.EntityFrameworkCore.SqlServer\MultiTenant.EntityFrameworkCore.SqlServer.csproj", "{4E369357-9C77-4DD2-9979-34D7A32802AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiTenant.EntityFrameworkCore", "MultiTenant.EntityFrameworkCore\MultiTenant.EntityFrameworkCore.csproj", "{C473E398-269E-4DBC-A45B-D1AF3331D098}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiTenant.EntityFrameworkCore", "MultiTenant.EntityFrameworkCore\MultiTenant.EntityFrameworkCore.csproj", "{C473E398-269E-4DBC-A45B-D1AF3331D098}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiMultiTenantSample", "WebApiMultiTenantSample\WebApiMultiTenantSample.csproj", "{87D00A9A-CB71-48E0-8243-897BB16B9EDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiMultiTenantSample", "WebApiMultiTenantSample\WebApiMultiTenantSample.csproj", "{87D00A9A-CB71-48E0-8243-897BB16B9EDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiTenant.EntityFrameworkCore.PostgreSQL", "MultiTenant.EntityFrameworkCore.PostgreSQL\MultiTenant.EntityFrameworkCore.PostgreSQL.csproj", "{49915FC4-2C64-4802-8879-98285BA1CB5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{87D00A9A-CB71-48E0-8243-897BB16B9EDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87D00A9A-CB71-48E0-8243-897BB16B9EDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87D00A9A-CB71-48E0-8243-897BB16B9EDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49915FC4-2C64-4802-8879-98285BA1CB5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49915FC4-2C64-4802-8879-98285BA1CB5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49915FC4-2C64-4802-8879-98285BA1CB5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49915FC4-2C64-4802-8879-98285BA1CB5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

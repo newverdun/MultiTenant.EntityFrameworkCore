@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Nyua Solutions</Authors>
-    <Company>Nyua Solutions</Company>
+    <Authors>NyuaSolutions</Authors>
+    <Company>NyuaSolutions</Company>
     <Description>Implementation for using multiple Tenants within an ASP .NET Core API 3.1</Description>
     <Copyright>Verdun Labs 2020</Copyright>
     <PackageProjectUrl>https://github.com/newverdun/MultiTenant.EntityFrameworkCore</PackageProjectUrl>

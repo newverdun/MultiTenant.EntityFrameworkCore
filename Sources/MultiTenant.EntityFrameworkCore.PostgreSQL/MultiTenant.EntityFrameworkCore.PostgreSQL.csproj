@@ -1,23 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <Authors>NyuaSolutions</Authors>
 	  <Company>NyuaSolutions</Company>
-	  <Description>Implementation for using multiple Tenants</Description>
+	  <Description>Implementation for using multiple Tenants within an ASP .NET Core API 3.1</Description>
 	  <Copyright>Verdun Labs 2020</Copyright>
 	  <PackageProjectUrl>https://github.com/newverdun/MultiTenant.EntityFrameworkCore</PackageProjectUrl>
 	  <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Configuration\Settings\" />
+    <ProjectReference Include="..\MultiTenant.EntityFrameworkCore\MultiTenant.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
 </Project>
