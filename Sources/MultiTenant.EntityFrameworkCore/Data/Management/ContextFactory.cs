@@ -8,6 +8,12 @@ using System.Text;
 
 namespace MultiTenant.EntityFrameworkCore.Data.Management
 {
+    /// <summary>
+    /// Entity Framework context service
+    /// (Switches the db context according to tenant id field)
+    /// </summary>
+    /// <typeparam name="TDbContext">DbContext to whom the connection change will be made, according to the TenantId</typeparam>
+    /// <seealso cref="IContextFactory{TDbContext}"/>
     public class ContextFactory<TDbContext> : IContextFactory<TDbContext> where TDbContext : DbContext
     {
         private readonly string TenantIdFieldName;
@@ -15,6 +21,12 @@ namespace MultiTenant.EntityFrameworkCore.Data.Management
 
         private readonly IDataBaseManager dataBaseManager;
         private readonly IDatabaseType databaseType;
+
+        /// <summary>
+        /// Initialize the ContextFactory
+        /// </summary>
+        /// <param name="tenantIdFieldName">The HTTP header name to get the tenant ID</param>
+        /// <param name="serviceProvider">The service provider</param>
         public ContextFactory(
             string tenantIdFieldName,
             IServiceProvider serviceProvider)
@@ -25,6 +37,7 @@ namespace MultiTenant.EntityFrameworkCore.Data.Management
             databaseType = serviceProvider.GetRequiredService<IDatabaseType>();
         }
 
+        /// <inheritdoc />
         public TDbContext DbContext 
         {
             get

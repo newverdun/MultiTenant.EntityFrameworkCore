@@ -12,7 +12,6 @@ namespace MultiTenant.EntityFrameworkCore.Configuration.DatabaseTypes
         /// Enables database type in the service collection. 
         /// </summary>
         /// <param name="services"></param>
-        /// <param name="connectionOptions"></param>
         /// <returns></returns>
         IServiceCollection EnableDatabase(IServiceCollection services);
 

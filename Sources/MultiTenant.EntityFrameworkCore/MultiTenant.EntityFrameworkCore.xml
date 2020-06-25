@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MultiTenant.EntityFrameworkCore</name>
+    </assembly>
+    <members>
+        <member name="T:MultiTenant.EntityFrameworkCore.Configuration.DatabaseTypes.IDatabaseType">
+            <summary>
+            All database connection types should implement this interface to connect via entity framework core.
+            </summary>
+        </member>
+        <member name="M:MultiTenant.EntityFrameworkCore.Configuration.DatabaseTypes.IDatabaseType.EnableDatabase(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Enables database type in the service collection. 
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MultiTenant.EntityFrameworkCore.Configuration.DatabaseTypes.IDatabaseType.SetConnectionString``1(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder{``0},System.String)">
+            <summary>
+            updates with new connection string
+            </summary>
+            <typeparam name="TContext"></typeparam>
+            <param name="contextOptionsBuilder"></param>
+            <param name="connectionString"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MultiTenant.EntityFrameworkCore.Data.Management.ContextFactory`1">
+            <summary>
+            Entity Framework context service
+            (Switches the db context according to tenant id field)
+            </summary>
+            <typeparam name="TDbContext">DbContext to whom the connection change will be made, according to the TenantId</typeparam>
+            <seealso cref="T:MultiTenant.EntityFrameworkCore.IContextFactory`1"/>
+        </member>
+        <member name="M:MultiTenant.EntityFrameworkCore.Data.Management.ContextFactory`1.#ctor(System.String,System.IServiceProvider)">
+            <summary>
+            Initialize the ContextFactory
+            </summary>
+            <param name="tenantIdFieldName">The HTTP header name to get the tenant ID</param>
+            <param name="serviceProvider">The service provider</param>
+        </member>
+        <member name="P:MultiTenant.EntityFrameworkCore.Data.Management.ContextFactory`1.DbContext">
+            <inheritdoc />
+        </member>
+        <member name="P:MultiTenant.EntityFrameworkCore.Data.Management.ContextFactory`1.TenantId">
+            <summary>
+            Gets tenant id from HTTP header
+            </summary>
+            <value>
+            The tenant identifier.
+            </value>
+            <exception cref="T:System.ArgumentNullException">
+            httpContext
+            or
+            tenantId
+            </exception>
+        </member>
+        <member name="T:MultiTenant.EntityFrameworkCore.IContextFactory`1">
+            <summary>
+            Context factory interface
+            </summary>
+            <typeparam name="TDbContext"></typeparam>
+        </member>
+        <member name="P:MultiTenant.EntityFrameworkCore.IContextFactory`1.DbContext">
+            <summary>
+            Gets the database context.
+            </summary>
+            <value>
+            The database context.
+            </value>
+        </member>
+        <member name="T:MultiTenant.EntityFrameworkCore.IDataBaseManager">
+            <summary>
+            Multi tenant database manager
+            </summary>
+        </member>
+        <member name="M:MultiTenant.EntityFrameworkCore.IDataBaseManager.GetConnectionString(System.String)">
+            <summary>
+            Gets the connection string of the data base.
+            </summary>
+            <param name="tenantId">The tenant identifier.</param>
+            <returns>Connection String</returns>
+        </member>
+    </members>
+</doc>
