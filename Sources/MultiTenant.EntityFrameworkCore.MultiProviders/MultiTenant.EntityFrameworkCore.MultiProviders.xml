@@ -20,5 +20,16 @@
             <param name="tenantIdFieldName">HTTP header name to get the tenant ID</param>
             <returns>The services.</returns>
         </member>
+        <member name="M:MultiTenant.EntityFrameworkCore.MultiProviders.RegisterDI.AddMultiTenantEntityFrameworkCore``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Type)">
+            <summary>
+            Register dependencies to use MultiTenants
+            </summary>
+            <typeparam name="MultiTenantDbContext">DbContext which will be multi tenant</typeparam>
+            <typeparam name="TDataBaseManager">Implementation to obtain the connections strings corresponding to each tenant</typeparam>
+            <param name="services">The services.</param>
+            <param name="tenantIdFieldName">HTTP header name to get the tenant ID</param>
+            <param name="databaseType">The class that implements the IDatabaseType interface, dependency injection will be done automatically</param>
+            <returns>The services.</returns>
+        </member>
     </members>
 </doc>

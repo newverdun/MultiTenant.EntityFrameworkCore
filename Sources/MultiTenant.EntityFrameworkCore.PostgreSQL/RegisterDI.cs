@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MultiTenant.EntityFrameworkCore.Configuration.DatabaseTypes;
-using MultiTenant.EntityFrameworkCore.Data;
 using MultiTenant.EntityFrameworkCore.Data.Management;
 using MultiTenant.EntityFrameworkCore.PostgreSQL.Configuration.DatabaseTypes;
 

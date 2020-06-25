@@ -2,10 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MultiTenant.EntityFrameworkCore.Configuration.DatabaseTypes;
-using MultiTenant.EntityFrameworkCore.Data;
 using MultiTenant.EntityFrameworkCore.Data.Management;
 using System;
-using System.Linq;
 
 namespace MultiTenant.EntityFrameworkCore.MultiProviders
 {

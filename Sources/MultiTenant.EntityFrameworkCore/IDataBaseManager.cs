@@ -1,4 +1,4 @@
-﻿namespace MultiTenant.EntityFrameworkCore.Data.Management
+﻿namespace MultiTenant.EntityFrameworkCore
 {
     /// <summary>
     /// Multi tenant database manager

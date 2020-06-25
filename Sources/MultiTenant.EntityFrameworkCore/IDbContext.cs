@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MultiTenant.EntityFrameworkCore.Data
+namespace MultiTenant.EntityFrameworkCore
 {
     /// <summary>
     /// Interface for the Device EF Context
