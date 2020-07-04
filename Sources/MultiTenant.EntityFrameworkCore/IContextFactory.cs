@@ -18,5 +18,13 @@ namespace MultiTenant.EntityFrameworkCore
         /// The database context.
         /// </value>
         TDbContext DbContext { get; }
+
+        /// <summary>
+        /// Gets the database context by tenantId value
+        /// </summary>
+        /// <value>
+        /// The database context.
+        /// </value>
+        TDbContext GetDbContext(string tenantId);
     }
 }

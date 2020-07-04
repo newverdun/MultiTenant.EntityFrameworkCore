@@ -43,6 +43,9 @@
         <member name="P:MultiTenant.EntityFrameworkCore.Data.Management.ContextFactory`1.DbContext">
             <inheritdoc />
         </member>
+        <member name="M:MultiTenant.EntityFrameworkCore.Data.Management.ContextFactory`1.GetDbContext(System.String)">
+            <inheritdoc />
+        </member>
         <member name="P:MultiTenant.EntityFrameworkCore.Data.Management.ContextFactory`1.TenantId">
             <summary>
             Gets tenant id from HTTP header
@@ -65,6 +68,14 @@
         <member name="P:MultiTenant.EntityFrameworkCore.IContextFactory`1.DbContext">
             <summary>
             Gets the database context.
+            </summary>
+            <value>
+            The database context.
+            </value>
+        </member>
+        <member name="M:MultiTenant.EntityFrameworkCore.IContextFactory`1.GetDbContext(System.String)">
+            <summary>
+            Gets the database context by tenantId value
             </summary>
             <value>
             The database context.

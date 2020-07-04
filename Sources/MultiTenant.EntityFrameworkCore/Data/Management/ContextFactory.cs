@@ -49,6 +49,15 @@ namespace MultiTenant.EntityFrameworkCore.Data.Management
             }
         }
 
+        /// <inheritdoc />
+        public TDbContext GetDbContext(string tenantId)
+        {
+            var options = ChangeConnectionString(tenantId).Options;
+            TDbContext dbContext = (TDbContext)Activator.CreateInstance(typeof(TDbContext), options);
+
+            return dbContext;
+        }
+
         /// <summary>
         /// Gets tenant id from HTTP header
         /// </summary>
